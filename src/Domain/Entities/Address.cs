@@ -5,7 +5,7 @@ namespace Domain.Entities;
 public class Address : BaseAuditableEntity
 {
     public Guid InfoId { get; set; }
-    public Guid AddressTypeId { get; set; }
+    public int AddressTypeId { get; set; }
     public string Line1 { get; set; } = string.Empty;
     public string Line2 { get; set; } = string.Empty;
     public int DistrictId { get; set; }

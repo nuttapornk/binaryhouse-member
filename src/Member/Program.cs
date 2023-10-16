@@ -55,7 +55,7 @@ static void MigrationsDatabase(WebApplication app)
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An Error occurred sedding the Database");
+        logger.LogError(ex, "An Error occurred migration the Database");
     }
 }
 

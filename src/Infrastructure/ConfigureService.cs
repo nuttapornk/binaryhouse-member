@@ -1,10 +1,12 @@
 using Application.Common.Caching.Interfaces;
 using Application.Common.Interfaces;
 using Application.Common.Interfaces.Database;
+using Application.Common.Interfaces.Repositories;
 using Domain.Entities;
 using Infrastructure.Caching;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Interceptors;
+using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -53,6 +55,7 @@ public static class ConfigureService
     private static IServiceCollection ConfigRepositories(this IServiceCollection services)
     {
         services.AddTransient<IDateTime, DateTimeService>();
+        services.AddTransient<IInfoRepository, InfoRepository>();
         return services;
     }
 
